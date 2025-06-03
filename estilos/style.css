@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 body{
-    background: url(../imagens/fundo-madeira.jpg) no-repeat top center;
-    background-size: cover;
-    background-attachment: fixed;
+    background: url(../imagens/fundo-madeira.jpg) no-repeat top center; /* aqui é o fundo, sem repetir e centralizado. */
+    background-size: cover;  /*Para cobrir a tela toda*/
+    background-attachment: fixed; /*Para não ter rolagem no fundo*/
 }
 
 html, body{
@@ -17,20 +17,51 @@ html, body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+main{
+    position: relative;
+    height: 100vh;
+}
+
 section#telefone{
     background: url(../imagens/frame-iphone.png) no-repeat;
-    top: 50%;
+    position: absolute; /*Quando coloco position absolute ele permite eu posicionar o top e o left, mas ele ainda não fica centralizado, colocando o transform: translate como compensação das medidas para ai de fato centralizar.*/
+    top: 50%;  
     left: 50%;
     transform: translate(-50%, -50%);
     height: 627px;
     width: 311px;
-    position: absolute;
 }
+
+section#redes-sociais{
+    text-align: right;
+    padding-right: 12px;
+}
+
 
 img.logo{
-    width: 40px;
+    width: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.623);
+    box-sizing: border-box; /* Isso faz com que a borda faça parte da caixa da imagem*/
 }
 
-.tela{
-    
+section#redes-sociais img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.596);
+    transform: translate(-3px, -3px); 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.616);  
+    transition: transform .5s, border 1s; /*transições das animações*/
 }
+
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    height: 471px;
+    width: 267px;
+}
+
+
+
+
+
