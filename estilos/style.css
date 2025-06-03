@@ -46,11 +46,11 @@ img.logo{
     box-sizing: border-box; /* Isso faz com que a borda faça parte da caixa da imagem*/
 }
 
-section#redes-sociais img:hover{
+section#redes-sociais img:hover{ /* Configurações de animações/transições */
     border: 2px solid rgba(255, 255, 255, 0.596);
     transform: translate(-3px, -3px); 
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.616);  
-    transition: transform .5s, border 1s; /*transições das animações*/
+    transition: transform .5s, border 1s; /*transições das animações */
 }
 
 iframe#tela {
